@@ -52,8 +52,8 @@ Onde:
 ### 1. Clone o repositório
 
 ```bash
-git clone <url-do-repositorio>
-cd "otimizacao p sistrmas"
+git clone https://github.com/Matheus-Nardi/Simplex-Uber-Analysis.git
+cd "otimizacao p sistemas"
 ```
 
 ### 2. Compile o projeto
