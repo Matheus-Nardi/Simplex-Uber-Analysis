@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  simplex-uber-analysis:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: simplex-uber-analysis:latest
+    stdin_open: true  
+    tty: true         
+    working_dir: /app
+    command: ["java", "-cp", "/app/classes:/app/libs/*", "SimplexUberAnalysis"]

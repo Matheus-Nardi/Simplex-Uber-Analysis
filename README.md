@@ -46,6 +46,7 @@ Onde:
 - Java 21 ou superior
 - Maven 3.6+ instalado
 - Terminal/Command Prompt
+- (Opcional) Docker
 
 ## 🚀 Como Executar
 
@@ -73,6 +74,30 @@ Ou, se preferir compilar e executar em um único comando:
 ```bash
 mvn clean compile exec:java -Dexec.mainClass="SimplexUberAnalysis"
 ```
+
+## 🚢 Execução com Docker (opcional)
+
+Se preferir não instalar Maven localmente, utilize o `Dockerfile` e o `docker-compose.yml` fornecidos.
+
+### Requisitos
+
+- Docker Desktop 4.x (Windows/macOS) ou Docker Engine + Docker Compose V2 (Linux)
+
+### Passo a passo
+
+1. **Construir a imagem** (apenas na primeira vez ou quando alterar o código):
+  ```bash
+  docker compose build simplex-uber-analysis
+  ```
+2. **Executar a aplicação de forma interativa**:
+  ```bash
+  docker compose run --rm simplex-uber-analysis
+  ```
+  Esse comando cria um contêiner temporário, conecta o terminal para responder aos prompts e remove o contêiner ao final.
+3. **Opcional: reutilizar a imagem com `docker run`** (após o build):
+  ```bash
+  docker run --rm -it simplex-uber-analysis
+  ```
 
 ## 📖 Como Usar
 
